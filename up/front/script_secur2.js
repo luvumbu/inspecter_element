@@ -37,7 +37,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj[4];
+    
 
     console.log(myObj); 
     for(var i = 0 ; i<myObj.length;i++ ){
@@ -49,7 +49,7 @@ xmlhttp.onreadystatechange = function() {
     }
   }
 };
-xmlhttp.open("GET", "json.json", true);
+xmlhttp.open("GET", "http://localhost/inspecter_element/up/front/json_secur2.json", true);
 xmlhttp.send();
 
 
